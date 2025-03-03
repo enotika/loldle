@@ -69,11 +69,11 @@ python3 main.py
 
 Вот как выглядит интерфейс игры:
 
-![Скриншот главного окна](screenshots/main_window.png)
-![Скриншот первой игры](screenshots/first_game.png)
-![Скриншот второй игры](screenshots/second_game.png)
-![Скриншот третьей игры](screenshots/third_game.png)
-![Скриншот четвертой игры](screenshots/fourth_game.png)
+<img src="screenshots/main_window.png" width="50%" height="50%" />
+<img src="screenshots/first_game.png" width="50%" height="50%" />
+<img src="screenshots/second_game.png" width="50%" height="50%" />
+<img src="screenshots/third_game.png" width="50%" height="50%" />
+<img src="screenshots/fourth_game.png" width="50%" height="50%" />
 
 ## 🛠️ Разработка
 
