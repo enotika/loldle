@@ -166,11 +166,12 @@ class ImageGame(tk.Frame):
 
         img_to_show = random_image_part.crop_random_patch(self.image_address, 200, 200)
         img_to_show.save('show_image.jpg')  # Сохраняем вырезанный фрагмент
-
+        
         # Загружаем картинку
         self.image = Image.open('show_image.jpg')  # Укажите путь к изображению
         self.image = self.image.resize((300, 300))
         self.image_tk = ImageTk.PhotoImage(self.image)
+        os.remove("show_image.jpg")
 
     def check_answer(self, event=None):
         answer = self.input_field.get().strip().lower().replace(" ", "") 
@@ -205,6 +206,7 @@ class ImageGame(tk.Frame):
             self.image = Image.open('show_image.jpg')  # Загружаем картинку
             self.image = self.image.resize((300, 300))
             self.image_tk = ImageTk.PhotoImage(self.image)
+            os.remove("show_image.jpg")
             self.image_label.config(image=self.image_tk)
             self.image_label.image = self.image_tk
 

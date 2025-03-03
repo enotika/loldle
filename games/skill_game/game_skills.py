@@ -212,6 +212,7 @@ class SkillGame(tk.Frame):
         self.image = Image.open('show_image.jpg')  # Укажите путь к изображению
         # self.image = self.image.resize((300, 300))
         self.image_tk = ImageTk.PhotoImage(self.image)
+        os.remove("show_image.jpg")
 
     def check_answer(self, event=None):
         answer = self.input_field.get().strip().lower().replace(" ", "") 
