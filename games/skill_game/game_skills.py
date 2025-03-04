@@ -102,7 +102,7 @@ class SkillGame(tk.Frame):
         with open("data/info.json", "r", encoding="utf-8") as file:
             data = json.load(file)
         self.all_answers = [item["answer"] for item in data["answers"]]
-        self.buttons_frame = tk.Frame(self, background="green")
+        self.buttons_frame = tk.Frame(self, background="#0B0C10")
         self.buttons_frame.pack(pady=10)
         # self.create_buttons()
 
@@ -197,7 +197,7 @@ class SkillGame(tk.Frame):
             self.buttons_frame,
             text=button_texts[0],
             command=lambda: self.button_action(button_texts[0]),
-            font=("Arial", 14),
+            font=("Arial", 14), background="#66FCF1", foreground="black",
         )
         self.button_p.pack(side=tk.LEFT, padx=5)
         # Создаем первую кнопку
@@ -205,7 +205,7 @@ class SkillGame(tk.Frame):
             self.buttons_frame,
             text=button_texts[1],
             command=lambda: self.button_action(button_texts[1]),
-            font=("Arial", 14),
+            font=("Arial", 14), background="#66FCF1", foreground="black",
         )
         self.button_q.pack(side=tk.LEFT, padx=5)
         # Создаем первую кнопку
@@ -213,7 +213,7 @@ class SkillGame(tk.Frame):
             self.buttons_frame,
             text=button_texts[2],
             command=lambda: self.button_action(button_texts[2]),
-            font=("Arial", 14),
+            font=("Arial", 14), background="#66FCF1", foreground="black",
         )
         self.button_w.pack(side=tk.LEFT, padx=5)
         # Создаем первую кнопку
@@ -221,7 +221,7 @@ class SkillGame(tk.Frame):
             self.buttons_frame,
             text=button_texts[3],
             command=lambda: self.button_action(button_texts[3]),
-            font=("Arial", 14),
+            font=("Arial", 14), background="#66FCF1", foreground="black",
         )
         self.button_e.pack(side=tk.LEFT, padx=5)
         # Создаем первую кнопку
@@ -229,7 +229,7 @@ class SkillGame(tk.Frame):
             self.buttons_frame,
             text=button_texts[4],
             command=lambda: self.button_action(button_texts[4]),
-            font=("Arial", 14),
+            font=("Arial", 14), background="#66FCF1", foreground="black",
         )
         self.button_r.pack(side=tk.LEFT, padx=5)
 
@@ -237,28 +237,28 @@ class SkillGame(tk.Frame):
         messagebox.showinfo("Действие кнопки", f"Вы нажали кнопку {button_id}")
         match button_id:
             case 'Пассивка':
-                self.button_p.config(bg="red")
+                self.button_p.config(bg="#8f0037")
             case 'Q':
-                self.button_q.config(bg="red")
+                self.button_q.config(bg="#8f0037")
             case 'W':
-                self.button_w.config(bg="red")
+                self.button_w.config(bg="#8f0037")
             case 'E':
-                self.button_e.config(bg="red")
+                self.button_e.config(bg="#8f0037")
             case 'R':
-                self.button_r.config(bg="red")
+                self.button_r.config(bg="#8f0037")
 
         # print(self.image_address[-5][0])
         match self.image_address[-5][0]:
             case 'P':
-                self.button_p.config(bg="green")
+                self.button_p.config(bg="#009a4a")
             case 'Q':
-                self.button_q.config(bg="green")
+                self.button_q.config(bg="#009a4a")
             case 'W':
-                self.button_w.config(bg="green")
+                self.button_w.config(bg="#009a4a")
             case 'E':
-                self.button_e.config(bg="green")
+                self.button_e.config(bg="#009a4a")
             case 'R':
-                self.button_r.config(bg="green")
+                self.button_r.config(bg="#009a4a")
         self.button_p.config(state="disabled")
         self.button_q.config(state="disabled")
         self.button_w.config(state="disabled")

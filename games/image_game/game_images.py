@@ -264,6 +264,7 @@ class ImageGame(tk.Frame):
             self.image_label.config(image=self.image_tk)
             self.image_label.image = self.image_tk  # Сохраняем ссылку на изображение
             self.input_field.config(state="disabled")  # Блокирует ввод в поле
+            self.check_button.config(state="disabled")
         else:
             # messagebox.showerror("Неправильный ответ", "Попробуйте снова!")
             if self.count_expand < 20:

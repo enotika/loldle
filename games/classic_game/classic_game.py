@@ -229,6 +229,7 @@ class ClassicGame(tk.Frame):
 
         if cnt_bad == 0:
             self.entry.config(state="disabled")
+            self.entry_button.config(state="disabled")
         # Центрируем метки, добавляя их в Frame на основе pack
         for label in labels:
             label.pack(side=tk.LEFT, padx=5, anchor="center")
