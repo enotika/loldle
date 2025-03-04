@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 from tkinter import PhotoImage
 from games.classic_game.classic_game import ClassicGame
 from games.image_game.game_images import ImageGame
@@ -8,8 +9,8 @@ from PIL import Image, ImageTk, ImageDraw
 
 class App:
     def __init__(self, root):
-        
-        self.color = "#800000"
+        #d23b04
+        self.color = "#45A29E"
 
         self.root = root
         # self.root.after(100, self.set_background)
@@ -17,15 +18,16 @@ class App:
         self.root.title("Меню игр")
         self.root.geometry("600x400")
         # self.set_background()
-
+        # Изменим фон основного окна
+        self.root.configure(bg="#0B0C10")  # Темно-серый фон окна
         self.create_custom_menu()
-        self.main_frame = tk.Frame(self.root)
+        self.main_frame = ttk.Frame(self.root)
 
         self.main_frame.pack(fill=tk.BOTH, expand=True)
         # self.main_frame.place(x=0, y =0)
 
         # self.main_frame.place(x=50, y =50)
-        self.label = tk.Label(self.main_frame, text="Выберите игру из меню!", font=("Arial", 16))
+        self.label = ttk.Label(self.main_frame, text="Выберите игру из меню!", font=("Arial", 16))
         self.label.pack(pady=50)
         # self.root.wm_attributes("-transparentcolor", self.root["bg"])
         # Отложенный вызов для загрузки фона после отображения окна
@@ -43,13 +45,6 @@ class App:
         # Преобразуем изображение в формат, который Tkinter может использовать
         self.background_photo = ImageTk.PhotoImage(self.background_image)
 
-        # Создаем Label, который будет использоваться как фон
-        self.background_label = tk.Label(self.root, image=self.background_photo)
-        self.background_label.place(x=0, y=0, relwidth=1, relheight=1)  # Растягиваем на весь размер окна
-        # self.background_label = tk.Label(self.root, image=self.background_photo)
-        # self.background_label.pack(side="top", fill="both", expand="no")
-
-   
 
     def create_custom_menu(self):
         # Создаем Frame для меню
@@ -119,5 +114,15 @@ class App:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    style = ttk.Style()
+    style.configure("TButton", font=("Arial", 12), padding=10, background="#66FCF1", foreground="black")
+    style.configure("TLabel", font=("Arial", 16), foreground="#66FCF1",background="#0B0C10")
+    style.configure("TFrame", background="#0B0C10")
     app = App(root)
     root.mainloop()
+#  Бордовый, золотой и светло-серый
+
+#     Бордовый: #800020
+#     Золотой: #FFD700
+#     Светло-серый: #B0B0B0
+#0B0C10

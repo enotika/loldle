@@ -170,3 +170,9 @@ champions_dict = {
     "Юми": "Yuumi",
     "Ясуо": "Yasuo"
 }
+
+#0B0C10
+#1F2833
+#C5C6C7
+#66FCF1
+#45A29E
